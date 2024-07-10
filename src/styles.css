@@ -2,3 +2,11 @@ img {
     width: 200px;
     height: 200px;
 }
+
+nav {
+    overflow: hidden;
+}
+
+nav button.active {
+    background-color: #ccc;
+}
