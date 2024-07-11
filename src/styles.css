@@ -1,12 +1,171 @@
-img {
-    width: 200px;
-    height: 200px;
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "cinzel_decorativebold";
+  src: url("./assets/fonts/cinzeldecorative-bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/cinzeldecorative-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "im_fell_french_canon_proRg";
+  src: url("./assets/fonts/fefcrm27c-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fefcrm27c-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cinzel_decorativeregular";
+  src: url("./assets/fonts/cinzeldecorative-regular-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/cinzeldecorative-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aileronregular";
+  src: url("./assets/fonts2/aileron-regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts2/aileron-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  color: white;
+  background-color: #0f172a;
+  position: relative;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
 nav {
-    overflow: hidden;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 60px 20px 40px 0px;
 }
 
 nav button.active {
-    background-color: #ccc;
+}
+
+button {
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  color: #f1f5f9;
+  font-family: "aileronregular";
+}
+
+button::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #f8fafc;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "cinzel_decorativebold";
+  color: #f1f5f9;
+  margin: 60px 80px 0px 0px;
+  font-size: 2.5rem;
+  word-spacing: 10px;
+}
+
+#para {
+  margin: 60px 0px 150px 0px;
+  font-family: "im_fell_french_canon_proRg";
+  font-size: 3rem;
+  color: #f43f5e;
+}
+
+#desc-para {
+  font-family: "cinzel_decorativeregular";
+  font-size: 2rem;
+  margin: 0px 0px 90px 0px;
+  cursor: pointer;
+  color: #fcd34d;
+  font-weight: bold;
+  word-spacing: 5px;
+}
+
+#location-title,
+#location-text {
+  font-family: "aileronregular";
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+/* SVG */
+
+#logo {
+  max-width: 100px;
+  height: 80px;
+  position: absolute;
+  margin: 0px 0px 430px 330px;
+}
+
+#logo path {
+  fill: #fcd34d;
+  stroke: #e11d48;
+  stroke-width: 0.4;
+  transition: all 0.3s ease;
+}
+
+#logo path:hover {
+  fill: white;
+  stroke: #db2777;
+  stroke-width: 0.6;
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #e2e8f0;
+  }
+  50% {
+    fill: #ffdb63;
+  }
+  100% {
+    fill: #f43f5e;
+  }
+}
+
+#logo path {
+  animation: colorChange 1s infinite;
 }
