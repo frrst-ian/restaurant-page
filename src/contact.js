@@ -1,4 +1,4 @@
-const aboutPage = ()  => {
+const contactPage = ()  => {
     const header = document.createElement('h1');
     header.textContent= 'About Us';
 
@@ -6,4 +6,4 @@ const aboutPage = ()  => {
 
 }
 
-export{aboutPage};
+export{contactPage};
