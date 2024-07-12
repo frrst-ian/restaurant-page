@@ -191,7 +191,10 @@ h1,
 
 #contact-div {
   margin-top: 80px;
-  
+  background-color: #334155;
+  padding: 30px 50px 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(188, 188, 188, 0.159);
 }
 
 #contact-content-title {
