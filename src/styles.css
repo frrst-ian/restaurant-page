@@ -42,7 +42,6 @@
 
 body {
   line-height: 1.5;
-  color: white;
   background-color: #0f172a;
   position: relative;
 }
@@ -99,11 +98,15 @@ button:hover {
 }
 
 h1 {
-  font-family: "cinzel_decorativebold";
-  color: #f1f5f9;
   margin: 60px 80px 0px 0px;
   font-size: 2.5rem;
   word-spacing: 10px;
+}
+
+h1,
+#contact-title {
+  color: #f1f5f9;
+  font-family: "cinzel_decorativebold";
 }
 
 #para {
@@ -118,14 +121,24 @@ h1 {
   font-size: 2rem;
   margin: 0px 0px 90px 0px;
   cursor: pointer;
-  color: #fcd34d;
   font-weight: bold;
   word-spacing: 5px;
 }
 
+#desc-para,
+#contact-content-title {
+  color: #fcd34d;
+}
+
 #location-title,
-#location-text {
+#location-text ,
+#contact-div{
   font-family: "aileronregular";
+}
+
+#location-title,
+#location-text,
+#contact-div {
   font-size: 1.1rem;
   color: #94a3b8;
   line-height: 1.5;
@@ -168,4 +181,23 @@ h1 {
 
 #logo path {
   animation: colorChange 1s infinite;
+}
+
+/* Contact page CSS */
+#contact-title {
+  font-size: 2rem;
+  margin: 40px 0px 0px 0px;
+}
+
+#contact-div {
+  margin-top: 80px;
+  
+}
+
+#contact-content-title {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+#contact-content {
+  color: white;
 }

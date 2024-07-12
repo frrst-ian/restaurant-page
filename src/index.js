@@ -26,7 +26,7 @@ function openTab(tabName) {
         case 'menu':
             menuPage();
             break;
-        case 'about':
+        case 'contact':
             contactPage();
             break;
     }
@@ -35,7 +35,7 @@ function openTab(tabName) {
 // Add event listeners
 homeBtn.addEventListener('click', () => openTab('home'));
 menuBtn.addEventListener('click', () => openTab('menu'));
-aboutBtn.addEventListener('click', () => openTab('contact'));
+contactBtn.addEventListener('click', () => openTab('contact'));
 
 // Initialize with home page
 document.addEventListener('DOMContentLoaded', () => openTab('home'));
