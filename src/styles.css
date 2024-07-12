@@ -186,7 +186,7 @@ h1,
 /* Contact page CSS */
 #contact-title {
   font-size: 2rem;
-  margin: 40px 0px 0px 0px;
+  margin: 40px 50px 0px 0px;
 }
 
 #contact-div {
@@ -204,3 +204,25 @@ h1,
 #contact-content {
   color: white;
 }
+
+#contact-svg {
+  position: absolute;
+  margin: 0px 0px 215px 240px;
+  width: 50px;
+  height: 70px;
+}
+
+#contact-svg path {
+  fill: #e11d48;
+  stroke: #fc4d79;
+  stroke-width: 0.4;
+  transition: all 0.3s ease;
+
+}
+
+#contact-svg path:hover{
+  fill: #fcd34d;
+  stroke: #db2777;
+  stroke-width: 0.6;
+}
+
