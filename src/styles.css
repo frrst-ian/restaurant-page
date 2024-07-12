@@ -229,5 +229,9 @@ h1,
 #menu-container {
   display: flex;
   flex-direction: column;
-  color: white;
+  gap: 20px;
+}
+
+.maindish-div {
+  color:white;
 }
