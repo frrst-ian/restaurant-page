@@ -36,6 +36,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "montserrat_alternatesregular";
+  src: url("./assets/fonts3/montserratalternates-regular-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts3/montserratalternates-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
 }
@@ -131,16 +141,16 @@ h1,
 }
 
 #location-title,
-#location-text ,
-#contact-div{
-  font-family: "aileronregular";
+#location-text {
+  font-family: "montserrat_alternatesregular";
 }
 
 #location-title,
 #location-text,
-#contact-div {
+#contact-div,
+#menu-text {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #e5effc;
   line-height: 1.5;
   letter-spacing: 1px;
 }
@@ -184,9 +194,20 @@ h1,
 }
 
 /* Contact page CSS */
-#contact-title {
+#contact-title,
+#menu-title {
   font-size: 2rem;
-  margin: 40px 50px 0px 0px;
+  margin: 0px 50px 0px 0px;
+}
+
+#contact-title,
+#menu-title,
+#contact-div,
+#menu-title,
+#dish-title,
+#dish-desc ,
+#menu-text{
+  font-family: "montserrat_alternatesregular";
 }
 
 #contact-div {
@@ -201,13 +222,10 @@ h1,
   font-size: 1.2rem;
   margin-bottom: 25px;
 }
-#contact-content {
-  color: white;
-}
 
 #contact-svg {
   position: absolute;
-  margin: 0px 0px 215px 240px;
+  margin: 0px 0px 252px 190px;
   width: 50px;
   height: 70px;
 }
@@ -217,10 +235,9 @@ h1,
   stroke: #fc4d79;
   stroke-width: 0.4;
   transition: all 0.3s ease;
-
 }
 
-#contact-svg path:hover{
+#contact-svg path:hover {
   fill: #fcd34d;
   stroke: #db2777;
   stroke-width: 0.6;
@@ -229,9 +246,82 @@ h1,
 #menu-container {
   display: flex;
   flex-direction: column;
+  width: 430px;
   gap: 20px;
 }
 
-.maindish-div {
-  color:white;
+#menu-title {
+  color: #f1f5f9;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0px 55px 30px 0px;
+}
+
+div.maindish-div {
+  color: #0f172a;
+  margin: 10px;
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#dish-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(240, 46, 91, 0.911)
+}
+
+#dish-desc {
+  color: #0f172abd;
+}
+
+#menu-text {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#menu-svg {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  margin: 0px 0px 750px 200px;
+}
+
+#menu-svg path:nth-child(1){
+  fill: #fde68a;
+}
+
+#menu-svg path:nth-child(2) {
+  fill: #f43f5e;
+}
+
+#menu-svg path:nth-child(3) {
+  fill: #f43f5e;
+}
+
+#menu-svg path:nth-child(4){
+  fill: #fde68a;
+}
+
+#menu-svg path {
+  fill: #fcd34d;
+  stroke: #334155b3;
+  stroke-width: 0.4;
+  transition: all 0.3s ease;
+}
+
+#menu-svg path:hover {
+  fill: rgb(44, 61, 120);
+  stroke: #db2777;
+  stroke-width: 0.6;
+}
+
+@keyframes blink {
+  0% {fill: white;}
+  50% {fill:#06b6d4;}
+  100% {fill: #db2777;}
+}
+
+#menu-svg path {
+  animation: blink 1s infinite;
 }
